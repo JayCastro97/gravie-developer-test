@@ -1,0 +1,15 @@
+.featuredBlock {
+    display: flex ;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 475px; 
+    padding: 0;  
+}
+
+.bannerImage {
+    left: auto;
+    right: 0;
+    height: 475px;
+    width: 60%;
+}

@@ -1,15 +1,20 @@
+import { GiantBombService } from './../services/giant-bomb.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-featured-banner',
+  selector: 'featured-banner',
   templateUrl: './featured-banner.component.html',
   styleUrls: ['./featured-banner.component.css']
 })
 export class FeaturedBannerComponent implements OnInit {
 
-  constructor() { }
+  image : String;
+  featuredId = "10983";
+  constructor(private service: GiantBombService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    console.log("featureBanner loaded!");
+	  this.service.getGame(this.featuredId);
   }
 
 }
